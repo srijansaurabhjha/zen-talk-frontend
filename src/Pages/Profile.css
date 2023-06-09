@@ -1,0 +1,17 @@
+.profile_container{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgba(255, 255, 255, 0.646);
+    background-blend-mode: lighten;
+}
+
+.profile_title{
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+    color: gray;
+}
+
+.profile_title_value{
+    font-family: 'Roboto Slab', serif;
+    color: gray;
+    text-shadow: 1px 1px ;
+}
