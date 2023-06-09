@@ -36,7 +36,7 @@ const Login = () => {
              },
            };
 
-           const {data}=await axios.post("/api/users/login",{email,password},config);
+           const {data}=await axios.post("https://zen-talk-backend.onrender.com/api/users/login",{email,password},config);
 
            localStorage.setItem("userInfo",JSON.stringify(data));
            setLoading(false);

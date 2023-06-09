@@ -49,7 +49,7 @@ const SingleChat = ({fetchAgain,setFetchAgain}) => {
 
         // console.log(messages);
 
-        const {data}=await axios.get(`/api/message/${chatSelected._id}`,config);
+        const {data}=await axios.get(`https://zen-talk-backend.onrender.com/api/message/${chatSelected._id}`,config);
         setMessages(data);
         setLoading(false);
 
@@ -124,7 +124,7 @@ const SingleChat = ({fetchAgain,setFetchAgain}) => {
          };
          
          setNewMessage("");
-         const {data}=await axios.post('/api/message',{
+         const {data}=await axios.post('https://zen-talk-backend.onrender.com/api/message',{
              content:newMessage,
              chatId:chatSelected._id
          },config);

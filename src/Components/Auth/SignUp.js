@@ -71,7 +71,7 @@ const SignUp = () => {
             },
          };
 
-         const {data}=await axios.post("/api/users",{name,email,password,pic},config);
+         const {data}=await axios.post("https://zen-talk-backend.onrender.com/api/users",{name,email,password,pic},config);
 
          localStorage.setItem("userInfo",JSON.stringify(data));
 

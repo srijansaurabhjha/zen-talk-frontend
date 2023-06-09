@@ -46,7 +46,7 @@ const GroupChatModal = ({children}) => {
           };
            
 
-          const {data}=await axios.get(`/api/users?search=${search}`,config);
+          const {data}=await axios.get(`https://zen-talk-backend.onrender.com/api/users?search=${search}`,config);
 
           setLoading(false);
           setResults(data);
@@ -68,7 +68,7 @@ const GroupChatModal = ({children}) => {
           },
        };
 
-       const {data}=await axios.post('/api/chat/group',{
+       const {data}=await axios.post('https://zen-talk-backend.onrender.com/api/chat/group',{
            name:groupChatName,
            users:JSON.stringify(selectedUsers?.map((u)=>u?._id))
        },config);

@@ -54,7 +54,7 @@ const UpdateGroupChatModal = ({fetchAgain,setFetchAgain,fetchMessages}) => {
         },
       };
 
-       const {data}=await axios.put('/api/chat/removeFromGroup',{
+       const {data}=await axios.put('https://zen-talk-backend.onrender.com/api/chat/removeFromGroup',{
         chatId:chatSelected._id,
         userId:u._id,
        },config);
@@ -89,7 +89,7 @@ const UpdateGroupChatModal = ({fetchAgain,setFetchAgain,fetchMessages}) => {
            },
          };
 
-         const {data}=await axios.put('/api/chat/renameGroup',{
+         const {data}=await axios.put('https://zen-talk-backend.onrender.com/api/chat/renameGroup',{
             chatId:chatSelected._id,
             chatName:groupChatName,
          },config);
@@ -119,7 +119,7 @@ const UpdateGroupChatModal = ({fetchAgain,setFetchAgain,fetchMessages}) => {
         };
          
 
-        const {data}=await axios.get(`/api/users?search=${search}`,config);
+        const {data}=await axios.get(`https://zen-talk-backend.onrender.com/api/users?search=${search}`,config);
 
         setLoading(false);
         setResults(data);
@@ -156,7 +156,7 @@ const UpdateGroupChatModal = ({fetchAgain,setFetchAgain,fetchMessages}) => {
          },
        };
  
-        const {data}=await axios.put('/api/chat/removeFromGroup',{
+        const {data}=await axios.put('https://zen-talk-backend.onrender.com/api/chat/removeFromGroup',{
          chatId:chatSelected._id,
          userId:u._id,
         },config);
@@ -192,7 +192,7 @@ const UpdateGroupChatModal = ({fetchAgain,setFetchAgain,fetchMessages}) => {
               },
         };
 
-        const {data}=await axios.put('/api/chat/addToGroup',{
+        const {data}=await axios.put('https://zen-talk-backend.onrender.com/api/chat/addToGroup',{
             chatId:chatSelected._id,
             userId:u._id,
         },config);

@@ -22,7 +22,7 @@ const UsersChat = ({fetchAgain}) => {
          },
        };
 
-        const {data}=await axios.get('/api/chat',config);
+        const {data}=await axios.get('https://zen-talk-backend.onrender.com/api/chat',config);
         setChats(data);
         if(groupChatNotify===true){
            setGroupChatNotify(false);

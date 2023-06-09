@@ -74,7 +74,7 @@ const SearchDrawer = () => {
           },
         };
 
-        const {data}=await axios.get(`/api/users?search=${search}`,config);
+        const {data}=await axios.get(`https://zen-talk-backend.onrender.com/api/users?search=${search}`,config);
         setLoading(false);
         setResult(data);
      }catch(err){
@@ -93,7 +93,7 @@ const SearchDrawer = () => {
         };
 
         
-        const {data}=await axios.post('/api/chat',{UserId},config);
+        const {data}=await axios.post('https://zen-talk-backend.onrender.com/api/chat',{UserId},config);
         
         if(!chats.find((c)=>c._id===data._id))setChats([data,...chats]); 
 
