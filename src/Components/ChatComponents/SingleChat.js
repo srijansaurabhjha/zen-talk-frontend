@@ -100,7 +100,10 @@ const SingleChat = ({fetchAgain,setFetchAgain}) => {
      socket.on("groupChat created",()=>setFetchAgain(!fetchAgain));
 
      //sending notif to user who is deleted
-     socket.on("you are removed",()=>setFetchAgain(!fetchAgain));
+     socket.on("you are removed",()=>{
+      setFetchAgain(!fetchAgain);
+      setChatSelected("");
+   });
   });
 
   const sendMessage=async(e)=>{
