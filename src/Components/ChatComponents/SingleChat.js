@@ -75,7 +75,7 @@ const SingleChat = ({fetchAgain,setFetchAgain}) => {
   },[chatSelected]);
 
   // console.log(notification,"----------------------");
-  console.log(window.location);
+//   console.log(window.location);
   useEffect(()=>{
      socket.on("message recieved",(msgReceived)=>{
         if(!selectedChatCompare||selectedChatCompare._id!==msgReceived.chat._id){
