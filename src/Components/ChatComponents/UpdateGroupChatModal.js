@@ -166,6 +166,7 @@ const UpdateGroupChatModal = ({fetchAgain,setFetchAgain,fetchMessages}) => {
         setChatSelected();
         setFetchAgain(!fetchAgain);
         setLoading(false);
+        // socket.emit("you are removed",chatSelected);
       }catch(err){
          console.log(err.message);
          setLoading(false);

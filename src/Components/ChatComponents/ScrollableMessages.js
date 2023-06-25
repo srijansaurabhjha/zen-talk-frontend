@@ -9,7 +9,6 @@ const ScrollableMessages = ({messages}) => {
   const {user}= TalkState();
 
   return (
-    <Box sx={{paddingBottom:'1%'}}>
     <ScrollableFeed>
       {
         messages && messages.map((m,i)=>(
@@ -44,7 +43,6 @@ const ScrollableMessages = ({messages}) => {
         ))
       }
     </ScrollableFeed>
-    </Box>
   )
 }
 
