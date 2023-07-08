@@ -22,7 +22,7 @@ const SignUp = () => {
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
-  const postDetail=(pics)=>{
+  const postDetail=async(pics)=>{
       setLoading(true);
       if(pics===undefined){
          setLoading(false);
@@ -35,7 +35,7 @@ const SignUp = () => {
           data.append("file",pics);
           data.append("upload_preset","zen-talk");
           data.append("cloud_name","dz0fxifsz");
-          fetch("https://api.cloudinary.com/v1_1/dz0fxifsz/image/upload",{
+          await fetch("https://api.cloudinary.com/v1_1/dz0fxifsz/image/upload",{
              method:'post',
              body:data,
           }).then((res)=>res.json())
