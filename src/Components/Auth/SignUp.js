@@ -13,6 +13,7 @@ const SignUp = () => {
   const [confirmPassword,setConfirmPassword]=useState();
   const [pic,setPic]=useState();
   const [loading,setLoading]=useState(false);
+  const [imageMsg,setImageMsg]=useState(false);
   const [open,setOpen]=useState(1);
   //1->success 2->Unfilled 3->password does not match
 //   const history=useHistory();
@@ -40,15 +41,26 @@ const SignUp = () => {
              body:data,
           }).then((res)=>res.json())
           .then((data)=>{
-            setPic(data.url);
-            console.log(data);
-            setLoading(false);
+            if(data.url){
+               setPic(data.url);
+               console.log(data);
+               setLoading(false);
+            }else{
+               setImageMsg(true);
+               setPic();
+               setLoading(false);
+            }
           })
           .catch((err)=>{
             console.log(err.message);
-            // setLoading(false);
+            setImageMsg(true);
+            setPic();
+            setLoading(false);
           });
+          
       }else{
+         setImageMsg(true);
+         setPic();
          setLoading(false);
          return;
       }
@@ -89,6 +101,10 @@ const SignUp = () => {
      setOpen(1);
   }
 
+  const handleCloseImage=()=>{
+   setImageMsg(false)
+  }
+
 
   return (
     <Stack spacing={3} color='black' mt={4} className='signUp_container'>
@@ -117,6 +133,7 @@ const SignUp = () => {
         <Button variant='contained' disabled={loading} onClick={handleSubmit} >
             SignUp
         </Button>
+        <Snackbar onClose={handleCloseImage} open={imageMsg} message={"Upload the image again"} autoHideDuration={2000} ContentProps={{sx:{background: "coral"}}}/>
         <Snackbar onClose={handleClose} open={open===2} message={"Fill all the required fields"} autoHideDuration={2000} ContentProps={{sx:{background: "coral"}}}/>
         <Snackbar onClose={handleClose} open={open===3} message={"Password and confirm password does not match"} autoHideDuration={2000} ContentProps={{sx:{background: "#D8000C"}}}/>
         
