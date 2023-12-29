@@ -128,7 +128,7 @@ const SearchDrawer = () => {
       <Box sx={{display:'flex'}} >
          <ChatIcon sx={{alignSelf:'center',marginRight:'8px',color:'#27374D',fontSize:'35px'}}/>
          <Typography fontSize={30} fontFamily={'cursive'} fontWeight={600} color={'#40128B'}>
-           ZenTalk
+           Chat
          </Typography>
       </Box>
 
