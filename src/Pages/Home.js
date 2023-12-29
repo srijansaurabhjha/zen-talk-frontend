@@ -44,7 +44,7 @@ const Home = () => {
           sx={{ alignSelf: "center", fontSize: "2.3rem", color: "white" }}
         />
         <Typography className="title" fontSize={30} ml={2}>
-          ZenTalk
+          Chat
         </Typography>
       </Box>
 
