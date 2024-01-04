@@ -8,6 +8,7 @@ import ChatIcon from "@mui/icons-material/Chat";
 import SignUp from "../Components/Auth/SignUp";
 import Login from "../Components/Auth/Login";
 import { useNavigate } from "react-router-dom";
+import goodspaceWelcome from '../Frame 1171279309PNG.png'
 
 const Home = () => {
 
@@ -31,11 +32,13 @@ const Home = () => {
   return (
     <Container
       maxWidth="xl"
-      sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      sx={{ display: "flex", alignItems: "center" }}
     >
+      <img src={goodspaceWelcome} alt="#"/>
+      <Box sx={{width:'60%',marginLeft:'4rem'}}>
       <Box
         className="title_box"
-        sx={{ width: "53.5%", textAlign: "center" }}
+        sx={{ width: "87%", textAlign: "center" }}
         mt={5}
         p={1}
         bgcolor={"#4C4C6D"}
@@ -48,7 +51,7 @@ const Home = () => {
         </Typography>
       </Box>
 
-      <Box className={"auth_box"} sx={{width:'50%'}} mt={4} p={4}>
+      <Box className={"auth_box"} sx={{width:'80%'}} mt={4} p={4}>
         <Tabs centered value={currTabIndex} onChange={handleTabChange} variant="standard" textColor="primary" indicatorColor="secondary">
           <Tab className="tab" label={<Typography fontWeight={550} className={currTabIndex===0?"tab_label_On":"tab_label"}>SignUp</Typography>} sx={{marginRight:'0.5rem',backgroundColor:'#A0C3D2'}}/>
           <Tab className="tab" label={<Typography fontWeight={550} className={currTabIndex===1?"tab_label_On":"tab_label"}>Login</Typography>} sx={{marginLeft:'0.5rem',backgroundColor:'#A0C3D2'}}/>
@@ -69,6 +72,7 @@ const Home = () => {
           </div>
         )}
 
+      </Box>
       </Box>
     </Container>
   );
