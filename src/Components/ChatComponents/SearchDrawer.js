@@ -15,7 +15,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import { getSenderName } from '../../config/ChatLogics';
 import NotificationBadge from "react-notification-badge";
 import { Effect } from "react-notification-badge";
-
+import goodspace from '../../VectorPNG.png';
 
 const SearchDrawer = () => {
    const [search,setSearch]=useState();
@@ -116,7 +116,7 @@ const SearchDrawer = () => {
 
   return (
     <>
-      <Box className='searchDrawer_container' sx={{display:'flex',justifyContent:'space-between',alignItems:'center',padding:'15px 20px'}}>
+      <Box className='searchDrawer_container' sx={{display:'flex',justifyContent:'space-between',alignItems:'center',padding:'15px 20px',backgroundColor:'rgba(255,255,255,0.1)'}}>
 
       <Tooltip title="Search Users" arrow > 
          <Button variant='contained' onClick={openDrawer}>
@@ -126,10 +126,7 @@ const SearchDrawer = () => {
       </Tooltip>
 
       <Box sx={{display:'flex'}} >
-         <ChatIcon sx={{alignSelf:'center',marginRight:'8px',color:'#27374D',fontSize:'35px'}}/>
-         <Typography fontSize={30} fontFamily={'cursive'} fontWeight={600} color={'#40128B'}>
-           Chat
-         </Typography>
+           <img src={goodspace} alt='#'/>
       </Box>
 
       <Box sx={{display:'flex'}}>
