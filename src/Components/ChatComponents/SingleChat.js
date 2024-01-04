@@ -214,7 +214,7 @@ const SingleChat = ({fetchAgain,setFetchAgain}) => {
 
         </Box>
       </>:(
-         <Box sx={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',width:'100%',height:'100%'}}>
+         <Box sx={{display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',width:'100%',height:'100%',backdropFilter:'blur(7px)'}}>
             <Typography variant='h3' fontFamily={"'Noto Sans', sans-serif"} fontWeight={600} color={'#FF0060'}>
                 Start Chat
             </Typography>
