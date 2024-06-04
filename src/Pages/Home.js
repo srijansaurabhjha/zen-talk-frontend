@@ -32,9 +32,8 @@ const Home = () => {
   return (
     <Container
       maxWidth="xl"
-      sx={{ display: "flex", alignItems: "center",justifyContent:"center" }}
+      sx={{ display: "flex", alignItems: "center",justifyContent:'center' }}
     >
-      // <img src={goodspaceWelcome} alt="#"/>
       <Box sx={{width:'60%',marginLeft:'4rem'}}>
       <Box
         className="title_box"
