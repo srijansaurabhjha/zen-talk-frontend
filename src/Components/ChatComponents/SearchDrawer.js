@@ -126,10 +126,11 @@ const SearchDrawer = () => {
       </Tooltip>
 
       <Box sx={{display:'flex'}} >
-           <img src={goodspace} alt='#'/>
+           // <img src={goodspace} alt='#'/>
+           ZEN TALK
       </Box>
 
-      <Box sx={{display:'flex'}}>
+      <Box sx={{display:'flex',color:'white',fontWeight:'bold',fontSize:'2rem'}}>
          {/* Notification menu */}
          <Box>
            <Button aria-controls={openNotif ? 'notif-menu' : undefined} aria-haspopup="true" aria-expanded={openNotif ? 'true' : undefined} onClick={handleNotifClick} sx={{display:'flex',flexDirection:'column'}}>
