@@ -12,7 +12,7 @@
 .app{
     min-height: 100vh;
     /* background-image: url("https://img.freepik.com/premium-photo/drawing-creative-colorful-speech-bubbles_670147-6065.jpg?w=1380"); */
-    background-image: url('../src/BackgroundPNG.png');
+    background-image: url('../src/bg-img2.png');
     background-size: cover;
     background-position: center;
     /* increasing opacity of backhround image */
